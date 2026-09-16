@@ -3,56 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Pontos | Desbravadores</title>
+
+    <title>SIGADBV | Sistema de Gestão Automatizada de Desbravadores</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <main class="login-container">
+    <main class="container">
 
-        <!-- Lado esquerdo -->
-        <section class="hero">
+        <!-- PAINEL ESQUERDO -->
+        <section class="brand-panel">
 
-            <div class="hero-content">
+            <div class="brand-content">
 
                 <div class="logo">
-                    🏕️
+                    <span>S</span>
                 </div>
 
-                <span class="small-title">ACAMPAMENTO</span>
+                <div class="brand-name">
+                    SIGADBV
+                </div>
+
+                <div class="line"></div>
 
                 <h1>
-                    Controle de<br>
-                    <strong>Pontos</strong>
+                    Sistema de Gestão
+                    <strong>Automatizada</strong>
+                    de Desbravadores
                 </h1>
 
                 <p>
-                    Sistema de gerenciamento de pontuação
-                    do Clube de Desbravadores.
+                    Uma plataforma para facilitar a gestão,
+                    organização e acompanhamento do Clube de
+                    Desbravadores.
                 </p>
 
-                <div class="camp-info">
-                    <div class="info-item">
-                        <span>🏆</span>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+
                         <div>
-                            <strong>Competição</strong>
-                            <small>Espírito de equipe</small>
+                            <strong>Gestão organizada</strong>
+                            <span>Informações centralizadas em um só lugar</span>
                         </div>
                     </div>
 
-                    <div class="info-item">
-                        <span>🔥</span>
+
+                    <div class="feature">
+                        <div class="feature-icon">★</div>
+
                         <div>
-                            <strong>Acampamento</strong>
-                            <small>União e aventura</small>
+                            <strong>Controle de pontos</strong>
+                            <span>Acompanhe o desempenho das unidades</span>
                         </div>
                     </div>
+
+
+                    <div class="feature">
+                        <div class="feature-icon">▣</div>
+
+                        <div>
+                            <strong>Gestão automatizada</strong>
+                            <span>Mais praticidade para o clube</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -60,83 +84,139 @@
         </section>
 
 
-        <!-- Lado direito -->
-        <section class="login">
+        <!-- PAINEL DE LOGIN -->
+        <section class="login-panel">
 
             <div class="login-box">
 
                 <div class="mobile-logo">
-                    🏕️
+                    <span>S</span>
                 </div>
 
-                <span class="welcome">BEM-VINDO</span>
+                <span class="welcome">
+                    ACESSO AO SISTEMA
+                </span>
 
-                <h2>Entrar no sistema</h2>
+                <h2>
+                    Bem-vindo ao SIGADBV
+                </h2>
 
                 <p class="subtitle">
-                    Acesse sua conta para gerenciar os pontos.
+                    Entre com suas credenciais para continuar.
                 </p>
+
 
                 <form>
 
-                    <div class="input-group">
-                        <label for="usuario">Usuário</label>
+                    <!-- USUÁRIO -->
 
-                        <div class="input-wrapper">
-                            <span>👤</span>
+                    <div class="input-group">
+
+                        <label for="usuario">
+                            Usuário
+                        </label>
+
+                        <div class="input">
+
+                            <span class="input-icon">
+                                👤
+                            </span>
+
                             <input
                                 type="text"
                                 id="usuario"
+                                name="usuario"
                                 placeholder="Digite seu usuário"
+                                autocomplete="username"
                                 required
                             >
+
                         </div>
+
                     </div>
 
 
-                    <div class="input-group">
-                        <label for="senha">Senha</label>
+                    <!-- SENHA -->
 
-                        <div class="input-wrapper">
-                            <span>🔒</span>
+                    <div class="input-group">
+
+                        <label for="senha">
+                            Senha
+                        </label>
+
+                        <div class="input">
+
+                            <span class="input-icon">
+                                🔒
+                            </span>
+
                             <input
                                 type="password"
                                 id="senha"
+                                name="senha"
                                 placeholder="Digite sua senha"
+                                autocomplete="current-password"
                                 required
                             >
+
                         </div>
+
                     </div>
 
 
-                    <div class="options">
+                    <div class="login-options">
+
                         <label class="remember">
-                            <input type="checkbox">
-                            <span>Lembrar de mim</span>
+
+                            <input
+                                type="checkbox"
+                                name="lembrar"
+                            >
+
+                            <span>
+                                Lembrar de mim
+                            </span>
+
                         </label>
 
-                        <a href="#">Esqueci minha senha</a>
+
+                        <a href="#">
+                            Esqueci minha senha
+                        </a>
+
                     </div>
 
 
                     <button type="submit">
-                        ENTRAR
+
+                        Entrar no sistema
+
                         <span>→</span>
+
                     </button>
 
                 </form>
 
 
-                <div class="divider">
-                    <span>DESBRAVADORES</span>
+                <div class="system-info">
+
+                    <div class="info-line"></div>
+
+                    <span>
+                        SIGADBV
+                    </span>
+
+                    <div class="info-line"></div>
+
                 </div>
 
-                <p class="footer-text">
-                    Controle de Pontos do Acampamento
+
+                <p class="footer">
+                    Sistema de Gestão Automatizada de Desbravadores
                 </p>
 
-                <p class="copyright">
-                    © 2026 • Clube de Desbravadores
+                <p class="version">
+                    Versão 1.0 • 2026
                 </p>
 
             </div>

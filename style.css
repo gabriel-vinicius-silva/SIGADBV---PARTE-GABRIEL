@@ -5,408 +5,527 @@
 }
 
 :root {
-    --green-dark: #173b2b;
-    --green: #236344;
-    --green-light: #3d8b5d;
-    --orange: #e68a32;
-    --cream: #f7f4ed;
-    --text: #1d2922;
-    --gray: #7b827d;
-    --border: #dfe4df;
+    --primary: #174f38;
+    --primary-dark: #103a29;
+    --primary-light: #287653;
+
+    --accent: #d89a36;
+
+    --background: #f5f7f5;
+    --white: #ffffff;
+
+    --text: #17221c;
+    --text-light: #737b76;
+
+    --border: #dfe5e1;
 }
+
 
 body {
-    font-family: "Montserrat", sans-serif;
-    background: #e9eee9;
     min-height: 100vh;
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--background);
 }
 
 
-/* =========================
-   CONTAINER PRINCIPAL
-========================= */
+/* =========================================
+   CONTAINER
+========================================= */
 
-.login-container {
+.container {
+
     min-height: 100vh;
+
     display: flex;
 }
 
 
-/* =========================
-   LADO ESQUERDO
-========================= */
+/* =========================================
+   PAINEL DA MARCA
+========================================= */
 
-.hero {
-    width: 50%;
+.brand-panel {
+
+    width: 52%;
+
     min-height: 100vh;
 
     position: relative;
 
+    overflow: hidden;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    overflow: hidden;
+    padding: 60px;
+
+    color: white;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(18, 54, 39, 0.97),
-            rgba(35, 99, 68, 0.94)
+            145deg,
+            #123c2a 0%,
+            #174f38 55%,
+            #216547 100%
         );
 }
 
 
-/* efeitos decorativos */
+/* formas decorativas */
 
-.hero::before {
+.brand-panel::before {
+
     content: "";
 
     position: absolute;
 
     width: 500px;
+
     height: 500px;
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.07);
 
-    top: -180px;
-    left: -180px;
+    top: -200px;
+
+    right: -150px;
 }
 
-.hero::after {
+
+.brand-panel::after {
+
     content: "";
 
     position: absolute;
 
-    width: 600px;
-    height: 600px;
+    width: 700px;
+
+    height: 700px;
 
     border-radius: 50%;
 
-    background: rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.05);
 
-    bottom: -300px;
-    right: -250px;
+    bottom: -400px;
+
+    left: -300px;
 }
 
 
-.hero-content {
-    width: 75%;
-    max-width: 520px;
+/* =========================================
+   CONTEÚDO DA MARCA
+========================================= */
 
-    color: white;
+.brand-content {
 
     position: relative;
+
     z-index: 2;
+
+    width: 100%;
+
+    max-width: 570px;
 }
 
 
 .logo {
-    width: 72px;
-    height: 72px;
+
+    width: 65px;
+
+    height: 65px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    font-size: 35px;
+    background: white;
 
-    background: rgba(255,255,255,0.12);
+    color: var(--primary);
 
-    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
 
-    border-radius: 18px;
+    font-size: 30px;
 
-    margin-bottom: 35px;
+    font-weight: 800;
 
-    backdrop-filter: blur(10px);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.15);
+
+    margin-bottom: 25px;
 }
 
 
-.small-title {
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 4px;
-
-    color: #d6eadc;
-}
-
-
-.hero h1 {
-    font-size: clamp(45px, 5vw, 72px);
-
-    line-height: 1.05;
-
-    margin-top: 15px;
-
-    font-weight: 500;
-}
-
-.hero h1 strong {
-    color: #f2a14a;
-}
-
-
-.hero p {
-    margin-top: 25px;
-
-    max-width: 430px;
-
-    color: #dcebe1;
-
-    line-height: 1.8;
+.brand-name {
 
     font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
 }
 
 
-/* =========================
-   INFORMAÇÕES
-========================= */
+.line {
 
-.camp-info {
+    width: 45px;
+
+    height: 3px;
+
+    background: var(--accent);
+
+    margin: 22px 0;
+}
+
+
+.brand-content h1 {
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    line-height: 1.08;
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+}
+
+
+.brand-content h1 strong {
+
+    display: block;
+
+    color: #e1a34a;
+
+    font-weight: 800;
+}
+
+
+.brand-content > p {
+
+    margin-top: 25px;
+
+    max-width: 500px;
+
+    color: #d2e1d9;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CARACTERÍSTICAS
+========================================= */
+
+.features {
+
+    margin-top: 45px;
+
     display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
 
     gap: 15px;
 
-    margin-top: 45px;
+    padding: 14px 16px;
+
+    width: 100%;
+
+    max-width: 440px;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.07);
+
+    border: 1px solid rgba(255,255,255,0.08);
 }
 
 
-.info-item {
+.feature-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
     display: flex;
 
     align-items: center;
 
-    gap: 12px;
+    justify-content: center;
 
-    padding: 15px 18px;
+    border-radius: 9px;
 
-    background: rgba(255,255,255,0.08);
+    background: rgba(216,154,54,0.15);
 
-    border: 1px solid rgba(255,255,255,0.12);
+    color: #e2a44c;
 
-    border-radius: 12px;
+    font-size: 15px;
+
+    font-weight: 800;
 }
 
 
-.info-item > span {
-    font-size: 23px;
-}
+.feature strong {
 
-
-.info-item strong {
     display: block;
 
     font-size: 12px;
+
+    margin-bottom: 4px;
 }
 
 
-.info-item small {
+.feature span {
+
     display: block;
 
-    color: #c8ddd0;
-
-    margin-top: 3px;
+    color: #bdd0c5;
 
     font-size: 10px;
 }
 
 
-/* =========================
-   LADO LOGIN
-========================= */
+/* =========================================
+   PAINEL LOGIN
+========================================= */
 
-.login {
-    width: 50%;
+.login-panel {
+
+    width: 48%;
+
+    min-height: 100vh;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    background: var(--cream);
-
-    padding: 40px;
+    padding: 50px;
 }
 
 
 .login-box {
+
     width: 100%;
-    max-width: 440px;
+
+    max-width: 430px;
 }
 
 
 .mobile-logo {
+
     display: none;
 }
 
 
 .welcome {
-    font-size: 11px;
+
+    color: var(--primary-light);
+
+    font-size: 10px;
 
     font-weight: 800;
 
-    letter-spacing: 3px;
-
-    color: var(--green-light);
+    letter-spacing: 2px;
 }
 
 
-.login h2 {
-    color: var(--text);
-
-    font-size: 32px;
+.login-box h2 {
 
     margin-top: 10px;
+
+    color: var(--text);
+
+    font-size: 30px;
+
+    letter-spacing: -1px;
 }
 
 
 .subtitle {
-    color: var(--gray);
-
-    font-size: 13px;
 
     margin-top: 10px;
 
     margin-bottom: 35px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
 }
 
 
-/* =========================
-   CAMPOS
-========================= */
+/* =========================================
+   INPUTS
+========================================= */
 
 .input-group {
+
     margin-bottom: 20px;
 }
 
 
 .input-group label {
+
     display: block;
+
+    margin-bottom: 8px;
+
+    color: #303a34;
 
     font-size: 12px;
 
     font-weight: 700;
-
-    color: #39433d;
-
-    margin-bottom: 8px;
 }
 
 
-.input-wrapper {
+.input {
+
+    height: 55px;
+
     display: flex;
 
     align-items: center;
 
-    border: 1px solid var(--border);
+    padding: 0 15px;
 
     background: white;
 
+    border: 1px solid var(--border);
+
     border-radius: 10px;
-
-    height: 55px;
-
-    padding: 0 15px;
 
     transition: 0.2s;
 }
 
 
-.input-wrapper:focus-within {
-    border-color: var(--green-light);
+.input:focus-within {
 
-    box-shadow: 0 0 0 3px rgba(61,139,93,0.1);
+    border-color: var(--primary-light);
+
+    box-shadow:
+        0 0 0 3px rgba(40,118,83,0.10);
 }
 
 
-.input-wrapper span {
-    font-size: 16px;
+.input-icon {
 
     margin-right: 12px;
 
-    opacity: 0.7;
+    font-size: 14px;
+
+    opacity: 0.55;
 }
 
 
-.input-wrapper input {
+.input input {
+
     width: 100%;
 
     border: none;
 
     outline: none;
 
+    background: transparent;
+
+    color: var(--text);
+
     font-family: inherit;
 
     font-size: 13px;
-
-    color: var(--text);
 }
 
 
-.input-wrapper input::placeholder {
-    color: #a4aaa5;
+.input input::placeholder {
+
+    color: #a0a7a2;
 }
 
 
-/* =========================
+/* =========================================
    OPÇÕES
-========================= */
+========================================= */
 
-.options {
+.login-options {
+
     display: flex;
-
-    justify-content: space-between;
 
     align-items: center;
 
-    margin: 5px 0 25px;
+    justify-content: space-between;
+
+    margin: 4px 0 25px;
 
     font-size: 11px;
 }
 
 
 .remember {
+
     display: flex;
 
     align-items: center;
 
     gap: 7px;
 
-    color: #6d756f;
+    color: var(--text-light);
 
     cursor: pointer;
 }
 
 
 .remember input {
-    accent-color: var(--green);
+
+    width: 13px;
+
+    height: 13px;
+
+    accent-color: var(--primary);
 }
 
 
-.options a {
-    color: var(--green);
+.login-options a {
 
-    font-weight: 700;
+    color: var(--primary);
 
     text-decoration: none;
+
+    font-weight: 700;
 }
 
 
-.options a:hover {
+.login-options a:hover {
+
     text-decoration: underline;
 }
 
 
-/* =========================
+/* =========================================
    BOTÃO
-========================= */
+========================================= */
 
 button {
+
     width: 100%;
 
     height: 55px;
@@ -415,7 +534,7 @@ button {
 
     border-radius: 10px;
 
-    background: var(--green);
+    background: var(--primary);
 
     color: white;
 
@@ -425,9 +544,9 @@ button {
 
     font-weight: 800;
 
-    letter-spacing: 1.5px;
-
     cursor: pointer;
+
+    transition: 0.25s;
 
     display: flex;
 
@@ -435,13 +554,12 @@ button {
 
     justify-content: center;
 
-    gap: 15px;
-
-    transition: 0.25s;
+    gap: 12px;
 }
 
 
 button span {
+
     font-size: 18px;
 
     transition: 0.25s;
@@ -449,157 +567,191 @@ button span {
 
 
 button:hover {
-    background: var(--green-dark);
+
+    background: var(--primary-dark);
 
     transform: translateY(-2px);
 
-    box-shadow: 0 8px 20px rgba(23,59,43,0.2);
+    box-shadow:
+        0 10px 25px rgba(23,79,56,0.18);
 }
 
 
 button:hover span {
+
     transform: translateX(5px);
 }
 
 
-/* =========================
+/* =========================================
    RODAPÉ
-========================= */
+========================================= */
 
-.divider {
+.system-info {
+
     display: flex;
 
     align-items: center;
 
-    gap: 15px;
+    gap: 12px;
 
-    margin: 35px 0 18px;
+    margin-top: 35px;
 
-    color: #a2aaa4;
+    color: #a1a8a3;
 
-    font-size: 9px;
+    font-size: 8px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     letter-spacing: 2px;
 }
 
 
-.divider::before,
-.divider::after {
-    content: "";
+.info-line {
+
+    flex: 1;
 
     height: 1px;
 
-    background: #dfe3df;
-
-    flex: 1;
+    background: var(--border);
 }
 
 
-.footer-text {
+.footer {
+
+    margin-top: 15px;
+
     text-align: center;
 
-    font-size: 11px;
-
-    color: #777f79;
-}
-
-
-.copyright {
-    text-align: center;
+    color: #858d87;
 
     font-size: 9px;
-
-    color: #a1a7a2;
-
-    margin-top: 8px;
 }
 
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+.version {
 
-@media (max-width: 850px) {
+    margin-top: 6px;
 
-    .login-container {
+    text-align: center;
+
+    color: #b1b6b2;
+
+    font-size: 8px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+
         flex-direction: column;
     }
 
-    .hero {
+
+    .brand-panel {
+
         width: 100%;
 
-        min-height: 300px;
+        min-height: auto;
 
-        padding: 50px 25px;
+        padding: 45px 30px;
     }
 
-    .hero-content {
+
+    .brand-content {
+
+        max-width: 650px;
+    }
+
+
+    .brand-content h1 {
+
+        font-size: 42px;
+    }
+
+
+    .features {
+
+        display: none;
+    }
+
+
+    .login-panel {
+
         width: 100%;
-        max-width: 600px;
+
+        min-height: auto;
+
+        padding: 60px 30px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 500px) {
+
+    .brand-panel {
+
+        padding: 35px 25px;
     }
 
-    .hero h1 {
-        font-size: 45px;
-    }
 
     .logo {
+
         width: 55px;
+
         height: 55px;
 
         font-size: 25px;
 
-        margin-bottom: 20px;
+        border-radius: 13px;
     }
 
-    .hero p {
-        margin-top: 15px;
+
+    .brand-name {
+
+        font-size: 13px;
+
+        letter-spacing: 3px;
     }
 
-    .camp-info {
-        margin-top: 25px;
+
+    .brand-content h1 {
+
+        font-size: 34px;
+
+        letter-spacing: -1px;
     }
 
-    .login {
-        width: 100%;
 
-        min-height: 600px;
+    .brand-content > p {
 
-        padding: 50px 25px;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    .hero {
-        min-height: auto;
-
-        padding: 40px 25px;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero p {
         font-size: 12px;
     }
 
-    .camp-info {
-        display: none;
-    }
 
-    .login {
+    .login-panel {
+
         padding: 45px 25px;
     }
 
-    .login h2 {
-        font-size: 26px;
+
+    .login-box h2 {
+
+        font-size: 25px;
     }
 
-    .options {
+
+    .login-options {
+
         font-size: 10px;
     }
 }
