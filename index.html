@@ -1,229 +1,357 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SIGADBV | Sistema de Gestão Automatizada de Desbravadores</title>
+    <title>Cadastro de Unidade | SIGADBV</title>
 
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cadastro-unidade.css">
 </head>
 
 <body>
 
-    <main class="container">
+    <main class="page-container">
 
-        <!-- PAINEL ESQUERDO -->
-        <section class="brand-panel">
+        <section class="register-card">
 
-            <div class="brand-content">
+            <!-- =========================================
+                 LOGO
+            ========================================== -->
 
-                <div class="logo">
-                    <span>S</span>
-                </div>
+            <div class="logo-area">
 
-                <div class="brand-name">
-                    SIGADBV
-                </div>
+                <img
+                    src="img/logodbv.png"
+                    alt="Logo do clube"
+                    class="club-logo"
+                >
 
-                <div class="line"></div>
+            </div>
 
-                <h1>
-                    Sistema de Gestão
-                    <strong>Automatizada</strong>
-                    de Desbravadores
-                </h1>
+
+            <!-- =========================================
+                 CABEÇALHO
+            ========================================== -->
+
+            <div class="header-area">
+
+                <h1>SIGADBV</h1>
 
                 <p>
-                    Uma plataforma para facilitar a gestão,
-                    organização e acompanhamento do Clube de
-                    Desbravadores.
-                </p>
-
-
-                <div class="features">
-
-                    <div class="feature">
-                        <div class="feature-icon">✓</div>
-
-                        <div>
-                            <strong>Gestão organizada</strong>
-                            <span>Informações centralizadas em um só lugar</span>
-                        </div>
-                    </div>
-
-
-                    <div class="feature">
-                        <div class="feature-icon">★</div>
-
-                        <div>
-                            <strong>Controle de pontos</strong>
-                            <span>Acompanhe o desempenho das unidades</span>
-                        </div>
-                    </div>
-
-
-                    <div class="feature">
-                        <div class="feature-icon">▣</div>
-
-                        <div>
-                            <strong>Gestão automatizada</strong>
-                            <span>Mais praticidade para o clube</span>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PAINEL DE LOGIN -->
-        <section class="login-panel">
-
-            <div class="login-box">
-
-                <div class="mobile-logo">
-                    <span>S</span>
-                </div>
-
-                <span class="welcome">
-                    ACESSO AO SISTEMA
-                </span>
-
-                <h2>
-                    Bem-vindo ao SIGADBV
-                </h2>
-
-                <p class="subtitle">
-                    Entre com suas credenciais para continuar.
-                </p>
-
-
-                <form>
-
-                    <!-- USUÁRIO -->
-
-                    <div class="input-group">
-
-                        <label for="usuario">
-                            Usuário
-                        </label>
-
-                        <div class="input">
-
-                            <span class="input-icon">
-                                👤
-                            </span>
-
-                            <input
-                                type="text"
-                                id="usuario"
-                                name="usuario"
-                                placeholder="Digite seu usuário"
-                                autocomplete="username"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SENHA -->
-
-                    <div class="input-group">
-
-                        <label for="senha">
-                            Senha
-                        </label>
-
-                        <div class="input">
-
-                            <span class="input-icon">
-                                🔒
-                            </span>
-
-                            <input
-                                type="password"
-                                id="senha"
-                                name="senha"
-                                placeholder="Digite sua senha"
-                                autocomplete="current-password"
-                                required
-                            >
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="login-options">
-
-                        <label class="remember">
-
-                            <input
-                                type="checkbox"
-                                name="lembrar"
-                            >
-
-                            <span>
-                                Lembrar de mim
-                            </span>
-
-                        </label>
-
-
-                        <a href="#">
-                            Esqueci minha senha
-                        </a>
-
-                    </div>
-
-
-                    <button type="submit">
-
-                        Entrar no sistema
-
-                        <span>→</span>
-
-                    </button>
-
-                </form>
-
-
-                <div class="system-info">
-
-                    <div class="info-line"></div>
-
-                    <span>
-                        SIGADBV
-                    </span>
-
-                    <div class="info-line"></div>
-
-                </div>
-
-
-                <p class="footer">
-                    Sistema de Gestão Automatizada de Desbravadores
-                </p>
-
-                <p class="version">
-                    Versão 1.0 • 2026
+                    Cadastre uma nova unidade do clube
                 </p>
 
             </div>
+
+
+            <!-- =========================================
+                 FORMULÁRIO
+            ========================================== -->
+
+            <form
+                class="register-form"
+                id="unitRegisterForm"
+            >
+
+                <!-- =====================================
+                     NOME DA UNIDADE
+                ====================================== -->
+
+                <div class="input-group">
+
+                    <label for="unitName">
+                        Nome da Unidade
+                    </label>
+
+                    <input
+                        type="text"
+                        id="unitName"
+                        name="unitName"
+                        placeholder="Digite o nome da unidade"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- =====================================
+                     INTEGRANTES
+                ====================================== -->
+
+                <div class="members-section">
+
+                    <label for="memberName">
+                        Integrantes
+                    </label>
+
+
+                    <div class="member-input-area">
+
+                        <input
+                            type="text"
+                            id="memberName"
+                            placeholder="Nome do integrante"
+                            autocomplete="off"
+                        >
+
+                        <button
+                            type="button"
+                            class="add-member-button"
+                            id="addMemberButton"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+
+                    <!-- =================================
+                         LISTA DE INTEGRANTES
+                    ================================== -->
+
+                    <div
+                        class="members-list"
+                        id="membersList"
+                    >
+
+                        <!-- Os integrantes serão adicionados aqui -->
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     BOTÃO DE CADASTRO
+                ====================================== -->
+
+                <button
+                    type="submit"
+                    class="register-button"
+                >
+                    Cadastrar Unidade
+                </button>
+
+
+                <!-- =====================================
+                     VOLTAR
+                ====================================== -->
+
+                <a
+                    href="index.html"
+                    class="back-link"
+                >
+                    Voltar para o acesso
+                </a>
+
+            </form>
 
         </section>
 
     </main>
 
+
+    <!-- =============================================
+         JAVASCRIPT
+    ============================================== -->
+
+    <script>
+
+        const form = document.getElementById("unitRegisterForm");
+
+        const memberInput = document.getElementById("memberName");
+
+        const addMemberButton =
+            document.getElementById("addMemberButton");
+
+        const membersList =
+            document.getElementById("membersList");
+
+
+        let members = [];
+
+
+        /* =========================================
+           ADICIONAR INTEGRANTE
+        ========================================== */
+
+        function addMember() {
+
+            const name = memberInput.value.trim();
+
+
+            if (name === "") {
+                return;
+            }
+
+
+            members.push(name);
+
+
+            memberInput.value = "";
+
+            memberInput.focus();
+
+
+            renderMembers();
+
+        }
+
+
+        /* =========================================
+           REMOVER INTEGRANTE
+        ========================================== */
+
+        function removeMember(index) {
+
+            members.splice(index, 1);
+
+            renderMembers();
+
+        }
+
+
+        /* =========================================
+           MOSTRAR INTEGRANTES
+        ========================================== */
+
+        function renderMembers() {
+
+            membersList.innerHTML = "";
+
+
+            members.forEach((member, index) => {
+
+                const memberItem =
+                    document.createElement("div");
+
+                memberItem.className = "member-item";
+
+
+                const memberName =
+                    document.createElement("span");
+
+                memberName.className = "member-name";
+
+                memberName.textContent = member;
+
+
+                const removeButton =
+                    document.createElement("button");
+
+                removeButton.type = "button";
+
+                removeButton.className =
+                    "remove-member-button";
+
+                removeButton.textContent = "×";
+
+
+                removeButton.addEventListener(
+                    "click",
+                    () => removeMember(index)
+                );
+
+
+                memberItem.appendChild(memberName);
+
+                memberItem.appendChild(removeButton);
+
+                membersList.appendChild(memberItem);
+
+            });
+
+        }
+
+
+        /* =========================================
+           BOTÃO ADICIONAR
+        ========================================== */
+
+        addMemberButton.addEventListener(
+            "click",
+            addMember
+        );
+
+
+        /* =========================================
+           ENTER NO CAMPO DE INTEGRANTE
+        ========================================== */
+
+        memberInput.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Enter") {
+
+                    event.preventDefault();
+
+                    addMember();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================
+           ENVIO DO FORMULÁRIO
+        ========================================== */
+
+        form.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const unitName =
+                    document.getElementById("unitName")
+                    .value
+                    .trim();
+
+
+                if (unitName === "") {
+
+                    return;
+
+                }
+
+
+                const unitData = {
+
+                    nome: unitName,
+
+                    integrantes: members
+
+                };
+
+
+                console.log(
+                    "Unidade cadastrada:",
+                    unitData
+                );
+
+
+                alert(
+                    "Unidade cadastrada com sucesso!"
+                );
+
+
+                /*
+                    Aqui posteriormente podemos
+                    enviar os dados para o banco
+                    de dados / backend.
+                */
+
+            }
+        );
+
+    </script>
+
 </body>
+
 </html>

@@ -1,0 +1,620 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background: #020617;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================
+   CONTAINER DA PÁGINA
+========================================= */
+
+.page-container {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.register-card {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    background: #111a2d;
+
+    border: 1px solid rgba(255, 255, 255, 0.04);
+
+    border-radius: 13px;
+
+    padding: 24px 26px 27px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.30);
+
+}
+
+
+/* =========================================
+   ÁREA DO LOGO
+========================================= */
+
+.logo-area {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 7px;
+
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.club-logo {
+
+    width: 68px;
+
+    height: 68px;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.header-area {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.header-area h1 {
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+
+    color: #f1f3f8;
+
+    margin-bottom: 7px;
+
+}
+
+
+.header-area p {
+
+    font-size: 11px;
+
+    color: #7d8aa5;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   FORMULÁRIO
+========================================= */
+
+.register-form {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =========================================
+   GRUPO DE INPUT
+========================================= */
+
+.input-group {
+
+    width: 100%;
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.input-group label,
+.members-section > label {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    color: #7f8ca7;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-group input {
+
+    width: 100%;
+
+    height: 49px;
+
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    border: 1px solid #17223a;
+
+    outline: none;
+
+    background: #050b1d;
+
+    color: #dce2ef;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.input-group input::placeholder {
+
+    color: #53617c;
+
+}
+
+
+.input-group input:focus {
+
+    border-color: #313d9b;
+
+    box-shadow:
+        0 0 0 2px rgba(55, 65, 180, 0.10);
+
+}
+
+
+/* =========================================
+   SEÇÃO DE INTEGRANTES
+========================================= */
+
+.members-section {
+
+    width: 100%;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* =========================================
+   ÁREA DO INPUT DE INTEGRANTE
+========================================= */
+
+.member-input-area {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+/* =========================================
+   INPUT DE INTEGRANTE
+========================================= */
+
+.member-input-area input {
+
+    flex: 1;
+
+    width: 100%;
+
+    height: 45px;
+
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    border: 1px solid #17223a;
+
+    outline: none;
+
+    background: #050b1d;
+
+    color: #dce2ef;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.member-input-area input::placeholder {
+
+    color: #53617c;
+
+}
+
+
+.member-input-area input:focus {
+
+    border-color: #313d9b;
+
+    box-shadow:
+        0 0 0 2px rgba(55, 65, 180, 0.10);
+
+}
+
+
+/* =========================================
+   BOTÃO +
+========================================= */
+
+.add-member-button {
+
+    width: 45px;
+
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #202d48;
+
+    color: #8290ad;
+
+    font-size: 23px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+.add-member-button:hover {
+
+    background: #293957;
+
+    color: #ffffff;
+
+}
+
+
+.add-member-button:active {
+
+    transform: scale(0.96);
+
+}
+
+
+/* =========================================
+   LISTA DE INTEGRANTES
+========================================= */
+
+.members-list {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-top: 10px;
+
+}
+
+
+/* =========================================
+   ITEM DO INTEGRANTE
+========================================= */
+
+.member-item {
+
+    width: 100%;
+
+    min-height: 39px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 10px 0 12px;
+
+    border-radius: 8px;
+
+    background: #0a1123;
+
+    border: 1px solid #151f35;
+
+}
+
+
+/* =========================================
+   NOME DO INTEGRANTE
+========================================= */
+
+.member-name {
+
+    color: #aab5c9;
+
+    font-size: 11px;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* =========================================
+   BOTÃO REMOVER
+========================================= */
+
+.remove-member-button {
+
+    width: 25px;
+
+    height: 25px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #596680;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.remove-member-button:hover {
+
+    color: #d96b79;
+
+    background: rgba(217, 107, 121, 0.08);
+
+}
+
+
+/* =========================================
+   BOTÃO CADASTRAR
+========================================= */
+
+.register-button {
+
+    width: 100%;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #22314b;
+
+    color: #7f8ca5;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+
+}
+
+
+.register-button:hover {
+
+    background: #293a59;
+
+    color: #b4bfd1;
+
+    box-shadow:
+        0 7px 20px rgba(52, 52, 180, 0.20);
+
+}
+
+
+.register-button:active {
+
+    transform: scale(0.99);
+
+}
+
+
+/* =========================================
+   LINK VOLTAR
+========================================= */
+
+.back-link {
+
+    display: block;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #56647f;
+
+    font-size: 10px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
+}
+
+
+.back-link:hover {
+
+    color: #8995ad;
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .page-container {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .register-card {
+
+        max-width: 100%;
+
+        padding: 23px 20px 24px;
+
+        border-radius: 12px;
+
+    }
+
+
+    .club-logo {
+
+        width: 62px;
+
+        height: 62px;
+
+    }
+
+
+    .header-area h1 {
+
+        font-size: 20px;
+
+        letter-spacing: 2.5px;
+
+    }
+
+}
